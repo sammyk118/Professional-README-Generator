@@ -20,7 +20,7 @@ const promptUser = () =>
 
 const generateREADME = (answers) =>
   `
-  
+  ${answers.title}
   `;
 
 
