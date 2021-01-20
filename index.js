@@ -7,15 +7,13 @@ const writeFileAsync = util.promisify(fs.writeFile);
 const promptUser = () =>
   inquirer.prompt([
     { type: 'input', name: 'title', message: 'Project title:', },
-    { type: 'input', name: 'description', message: 'Project description', },
-    { type: 'input', name: 'installation', message: 'Installation:', },
-    { type: 'input', name: 'usage', message: 'Usage', },
-    {
-      type: 'list', name: 'license', message: 'License', choices:
-  ["MIT", "GNU", "Unlicensed", "Mozilla", "Apache"]},
-    { type: 'input', name: 'contributing', message: 'contributing', },
-    { type: 'input', name: 'tests', message: 'Tests', },
-    { type: 'input', name: 'questions', message: 'Questions' },
+    { type: 'input', name: 'description', message: 'Brief description of your project:', },
+    { type: 'input', name: 'installation', message: 'Installation guide:', },
+    { type: 'input', name: 'usage', message: 'What\'s this used for?', },
+    { type: 'list', name: 'license', message: 'Choose a license:', choices: ["MIT", "GNU", "Unlicensed", "Mozilla", "Apache"] },
+    { type: 'input', name: 'contributing', message: 'Contributors to your project:', },
+    { type: 'input', name: 'tests', message: 'Any included tests people can run?', },
+    { type: 'input', name: 'questions', message: 'What if people have questions?' },
     { type: 'input', name: 'username', message: 'Github username:' },
     { type: 'input', name: 'email', message: 'Email address:' },
   ]);
@@ -27,7 +25,7 @@ const generateREADME = (answers) =>
 ${answers.description}
 
   ## Table of Contents
-- [Description](#Description)
+- [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
