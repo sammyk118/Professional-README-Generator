@@ -10,7 +10,9 @@ const promptUser = () =>
     { type: 'input', name: 'description', message: 'Project description', },
     { type: 'input', name: 'installation', message: 'Installation:', },
     { type: 'input', name: 'usage', message: 'Usage', },
-    { type: 'input', name: 'license', message: 'License', },
+    {
+      type: 'list', name: 'license', message: 'License', choices:
+  ["MIT", "GNU", "Unlicensed", "Mozilla", "Apache"]},
     { type: 'input', name: 'contributing', message: 'contributing', },
     { type: 'input', name: 'tests', message: 'Tests', },
     { type: 'input', name: 'questions', message: 'Questions' },
