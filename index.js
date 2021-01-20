@@ -38,7 +38,7 @@ const promptUser = () =>
     },
   ]);
 
-const generateHTML = (data) =>
+const generateREADME = (data) =>
 `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,13 +63,13 @@ const generateHTML = (data) =>
 </html>`;
 
 
-async function init() => {
+async function init () {
   try {
     const answers = await promptUser();
 
-    const html = generateHTML(answers);
+    const html = generateREADME(answers);
 
-    writeFileAsync('index.html', html);
+    writeFileAsync('output.md', html);
 
     console.log('Successfully wrote to index.html');
   } catch (err) {
