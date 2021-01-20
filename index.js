@@ -19,8 +19,40 @@ const promptUser = () =>
   ]);
 
 const generateREADME = (answers) =>
-  `
-  ${answers.title}
+  `${answers.title}
+
+## Description
+${answers.description}
+
+  ## Table of Contents
+- [Description](#Description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## License
+${answers.license}
+
+## Contributing
+${answers.contributing}
+
+## Tests
+${answers.tests}
+
+## Questions
+${answers.questions}
+
+Github: ${answers.username}
+Email me with any questions: ${answers.email}
   `;
 
 
