@@ -51,7 +51,7 @@ ${answers.tests}
 ## Questions
 ${answers.questions}
 
-Github: ${answers.username}
+Github: [${answers.username}](https://github.com/${answers.username}) <br>
 Email me with any questions: ${answers.email}
   `;
 
