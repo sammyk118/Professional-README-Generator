@@ -6,40 +6,20 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 const promptUser = () =>
   inquirer.prompt([
-    {
-      type: 'input',
-      name: 'name',
-      message: 'What is your name?',
-    },
-    {
-      type: 'input',
-      name: 'location',
-      message: 'Where are you from?',
-    },
-    {
-      type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
-    },
-    {
-      type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
-    },
-    {
-      type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
-    },
-    {
-      type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
-    },
+    { type: 'input', name: 'title', message: 'Project title:', },
+    { type: 'input', name: 'description', message: 'Project description', },
+    { type: 'input', name: 'installation', message: 'Installation:', },
+    { type: 'input', name: 'usage', message: 'Usage', },
+    { type: 'input', name: 'license', message: 'License', },
+    { type: 'input', name: 'contributing', message: 'contributing', },
+    { type: 'input', name: 'tests', message: 'Tests', },
+    { type: 'input', name: 'questions', message: 'Questions' },
+    { type: 'input', name: 'username', message: 'Github username:' },
+    { type: 'input', name: 'email', message: 'Email address:' },
   ]);
 
 const generateREADME = (data) =>
-`<!DOCTYPE html>
+  `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -63,7 +43,7 @@ const generateREADME = (data) =>
 </html>`;
 
 
-async function init () {
+async function init() {
   try {
     const answers = await promptUser();
 
