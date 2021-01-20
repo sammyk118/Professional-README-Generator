@@ -14,4 +14,8 @@ This program generates a markdown file based on user input from inquirer in the 
   - util
 
 ## Installation
-'npm init -y'
+`npm init -y`
+`npm install inquirer`
+
+## Usage
+`node index.js`
