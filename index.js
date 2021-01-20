@@ -47,11 +47,11 @@ async function init() {
   try {
     const answers = await promptUser();
 
-    const html = generateREADME(answers);
+    const content = generateREADME(answers);
 
-    writeFileAsync('output.md', html);
+    writeFileAsync('output.md', content);
 
-    console.log('Successfully wrote to index.html');
+    console.log('Successfully wrote to output.md');
   } catch (err) {
     console.log(err);
   }
