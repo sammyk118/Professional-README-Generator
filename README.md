@@ -19,3 +19,14 @@ This program generates a markdown file based on user input from inquirer in the 
 
 ## Usage
 `node index.js`
+
+## Author
+
+**Sammy Kroner**
+
+[LinkedIn](www.linkedin.com/in/samuel-kroner-44aa11169)
+
+[GitHub](https://github.com/sammyk118)
+
+## Acknowledgements
+UC Berkeley Extension
